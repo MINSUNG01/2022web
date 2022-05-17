@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .clearfix::after{content:"";display: block;clear: both;}
+
+        div.headerWrap{
+            width: 1000px;
+            margin: 0 auto;
+            /* background-color: blue; */
+        }
+        div.headerWrap>h1{
+            /* background-color: aqua; */
+            width: 100px;
+            margin: 0 auto;
+            line-height: 100px;
+        }
+        div.headerWrap>nav.navbar{
+            width: 1000px;
+            /* background-color: pink; */
+            
+        }
+        div.headerWrap>nav.navbar>ul>li{
+            float: left;
+            width: 20%;
+            line-height: 40px;
+            text-align: center;
+            
+        }
+        div.visual{height: 400px;background-color: green;}
+        .visual>.contents{width: 500px;height: 400px;
+            background-color: pink;
+            float: left;
+        }
+        .visual>.contents>ul>li{
+            float: right;
+            width: 20%;
+            line-height: 40px;
+            text-align: center;
+        }
+        .visual>.aside{width: 480px;height: 400px;
+            background-color: green;
+            float: right;}
+
+
+        .section{width: 1000px;margin:0 auto;}
+        .section>.contents{width: 500px;height: 400px;
+            /* background-color: pink; */
+            float: left;background-image: url(../images/apple.png);}
+        .section>.aside{width: 480px;height: 400px;
+            /* background-color: red; */
+            float: right;background-image: url(../images/car.png);}
+
+        .footer{background-color: gray;
+            padding: 20px 0 ;width: 1000px;margin: 0 auto;}
+        .footer>address{width: 1000px;margin:0 auto;text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="headerWrap">
+        <h1>LOGO</h1>
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </nav>
+  
+    <visual class="visual clearfix">
+        <div class="contents"></div>
+        <ul class="clearfix">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+        <aside class="aside"></aside>
+        
+    </visual>
+    
+    <section class="section clearfix">
+        <div class="contents"></div>
+        <aside class="aside"></aside>
+    </section>
+
+    <footer class="footer">
+        <address>JAKE</address>
+    </footer>
+   
+</body>
+</html>
